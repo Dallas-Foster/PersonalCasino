@@ -1,1 +1,7 @@
+Bet on either the bank, tie or the player’s hand, whichever you think has a value closest to 9, to earn a payout.
+Dealer and Player 3rd card draw logic elaborated in main.
 
+Card Values:
+2 to 9: Face value in points
+10, J, Q, K: 0 points
+A: 1 point
