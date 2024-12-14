@@ -1,0 +1,13 @@
+BaccaratStrategy.py employs machine learning to attempt to predict Baccarat game outcomes. It begins by generating synthetic training data
+using the generate_training_data function. This function simulates numerous Baccarat games, capturing the outcomes of each game and using 
+a specified history length to create sequences of past game results as features (X) and the subsequent game's outcome as labels (y). 
+These outcomes ('Player', 'Banker', 'Tie') are encoded into numerical values for computational processing using LabelEncoder.
+
+The script trains an MLPClassifier, a type of neural network, on the generated dataset (X and y). During training, the model learns to
+identify patterns in the historical sequences of Baccarat outcomes, aiming to accurately predict the outcome of future games
+based on past trends, and give its prediction to the user. The accuracy of the trained model is evaluated using the test set. 
+
+Testing gave the MLM an accuracy of 45.7% (RTP $45.7 for each $100 wagered). However, it must be noted that Both the house edge on banker,
+and a pushed bet on tie are not currently implemented (A tie results in a loss and payouts are 2:1 for Player/Banker). Changes will be made
+to implement the traditional rules of baccarat as soon as I can figure out to configure them to the MLM. When this is done, we should
+expect to see the proven 98.5% rtp or in our case 98.5% accuracy. 
